@@ -43,16 +43,17 @@ const printInfo = () => {
     for (let i = 0; i < teamMembers.length; i++) {
         const member = teamMembers[i];
         teamInfo.innerHTML += `<div class="col">
-                    <div class="card mb-3 bg-dark">
+                    <div class="card mb-3 bg-dark" style="height: 68%">
                         <div class="row g-0 style="max-width: 600px;">
-                            <div class="col-4 col-md-5 col-lg-4">
+                            <div class="col-5 col-md-5 col-lg-5">
                                 <img
                                     src="./assets/img/${member.img}"
-                                    class="img-fluid"
+                                    class="img"
                                     alt="${member.name}"
+                                    style="height: 70%"
                                 />
                             </div>
-                            <div class="col-8 col-md-7 col-lg-8">
+                            <div class="col-7 col-md-7 col-lg-7">
                                 <div class="card-body text-light">
                                     <h5 class="card-title">${member.name}</h5>
                                     <p class="card-text">
