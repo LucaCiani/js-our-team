@@ -42,26 +42,28 @@ const teamInfo = document.getElementById("team-info");
 const printInfo = () => {
     for (let i = 0; i < teamMembers.length; i++) {
         const member = teamMembers[i];
-        teamInfo.innerHTML += `<div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-4">
+        teamInfo.innerHTML += `<div class="col">
+                    <div class="card mb-3 bg-dark">
+                        <div class="row g-0 style="max-width: 600px;">
+                            <div class="col-4 col-md-5 col-lg-4">
                                 <img
-                                    src="../assets/img/${member.image}"
-                                    class="img-fluid rounded-start"
+                                    src="./assets/img/${member.img}"
+                                    class="img-fluid"
                                     alt="${member.name}"
                                 />
                             </div>
-                            <div class="col-8">
-                                <div class="card-body bg-dark text-light">
+                            <div class="col-8 col-md-7 col-lg-8">
+                                <div class="card-body text-light">
                                     <h5 class="card-title">${member.name}</h5>
                                     <p class="card-text">
                                         <p>${member.role}</p>
-                                        <a href="#">${member.email}</a>
+                                        <a class="small" href="#">${member.email}</a>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                    </div>`;
+                    </div>
+                </div>`;
     }
 };
 
